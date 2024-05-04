@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Estadísticas</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 30px;
+      }
+
+      /* Bar Graph Horizontal */
+      .bar-graph .year {
+        -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+        -moz-animation: fade-in-text 2.2s 0.1s forwards;
+        animation: fade-in-text 2.2s 0.1s forwards;
+        opacity: 0;
+      }
+
+      .bar-graph-horizontal {
+        max-width: 400px;
+      }
+
+      .bar-graph-horizontal>div {
+        float: left;
+        margin-bottom: 8px;
+        width: 100%;
+      }
+
+      .bar-graph-horizontal .year {
+        float: left;
+        margin-top: 18px;
+        width: 200px;
+      }
+
+      .bar-graph-horizontal .bar {
+        border-radius: 10px;
+        height: 45px;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        width: 0;
+      }
+
+      .bar-graph-one .bar::after {
+        -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+        -moz-animation: fade-in-text 2.2s 0.1s forwards;
+        animation: fade-in-text 2.2s 0.1s forwards;
+        color: #fff;
+        content: attr(data-percentage);
+        font-weight: 700;
+        position: absolute;
+        right: 16px;
+        top: 17px;
+      }
+
+      .bar-graph-one .bar-one .bar {
+        background-color: #6f3d5d;
+        -webkit-animation: show-bar-one 1.2s 0.1s forwards;
+        -moz-animation: show-bar-one 1.2s 0.1s forwards;
+        animation: show-bar-one 1.2s 0.1s forwards;
+      }
+
+      .bar-graph-one .bar-two .bar {
+        background-color: #795475;
+        -webkit-animation: show-bar-two 1.2s 0.2s forwards;
+        -moz-animation: show-bar-two 1.2s 0.2s forwards;
+        animation: show-bar-two 1.2s 0.2s forwards;
+      }
+
+      .bar-graph-one .bar-three .bar {
+        background-color: #b08ead;
+        -webkit-animation: show-bar-three 1.2s 0.3s forwards;
+        -moz-animation: show-bar-three 1.2s 0.3s forwards;
+        animation: show-bar-three 1.2s 0.3s forwards;
+      }
+
+      .bar-graph-one .bar-four .bar {
+        background-color: #ceb3cb;
+        -webkit-animation: show-bar-four 1.2s 0.4s forwards;
+        -moz-animation: show-bar-four 1.2s 0.4s forwards;
+        animation: show-bar-four 1.2s 0.4s forwards;
+      }
+
+      /* Bar Graph Horizontal Animations */
+      @-webkit-keyframes show-bar-one {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 100%;
+        }
+      }
+
+      @-webkit-keyframes show-bar-two {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 100%;
+        }
+      }
+
+      @-webkit-keyframes show-bar-three {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 87.5%;
+        }
+      }
+
+      @-webkit-keyframes show-bar-four {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 75%;
+        }
+      }
+
+      @-webkit-keyframes fade-in-text {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="bar-graph bar-graph-horizontal bar-graph-one">
+      <div class="bar-one">
+        <span class="year">Musical</span>
+        <div class="bar" data-percentage="100%"></div>
+      </div>
+      <div class="bar-two">
+        <span class="year">Naturalista</span>
+        <div class="bar" data-percentage="100%"></div>
+      </div>
+      <div class="bar-three">
+        <span class="year">Matemática</span>
+        <div class="bar" data-percentage="87.5%"></div>
+      </div>
+      <div class="bar-four">
+        <span class="year">Visual-Espacial</span>
+        <div class="bar" data-percentage="75%"></div>
+      </div>
+    </section>
+  </body>
+</html>
